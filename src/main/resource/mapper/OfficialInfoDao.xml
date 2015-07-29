@@ -1,0 +1,16 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ink.dao.OfficialInfoDao">
+
+    <!-- Result maps describe the mapping between the columns returned
+   from a query, and the class properties.  A result map isn't
+   necessary if the columns (or aliases) match to the properties
+   exactly. -->
+    <resultMap id="OfficialInfoResult" type="com.ink.entity.OfficialInfo">
+        <result property="id" column="id"/>
+        <result property="banner" column="banner"/>
+        <result property="info" column="info"/>
+    </resultMap>
+</mapper>

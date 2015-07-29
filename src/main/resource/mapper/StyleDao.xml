@@ -1,0 +1,23 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ink.dao.StyleDao">
+
+    <!-- Result maps describe the mapping between the columns returned
+   from a query, and the class properties.  A result map isn't
+   necessary if the columns (or aliases) match to the properties
+   exactly. -->
+    <resultMap id="StyleResult" type="com.ink.entity.Style">
+        <result property="id" column="id"/>
+        <result property="backgroundId" column="backgroundId"/>
+        <result property="fontId" column="fontId"/>
+        <result property="sort" column="sort"/>
+        <result property="createTime" column="createTime"/>
+        <association property="font" column="fontId" select="com.ink.dao.FontDao.findById" javaType="com.ink.entity.Font"/>
+        <association property="background" column="backgroundId" select="com.ink.dao.BackgroundDao.findById" javaType="com.ink.entity.Background"/>
+    </resultMap>
+
+
+
+</mapper>

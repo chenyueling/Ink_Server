@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <mappers>
+        <mapper resource="mapper/MessageDao.xml"/>
+        <mapper resource="mapper/BackgroundDao.xml"/>
+        <mapper resource="mapper/StyleDao.xml"/>
+        <mapper resource="mapper/FontDao.xml"/>
+        <mapper resource="mapper/OfficialInfoDao.xml"/>
+    </mappers>
+</configuration>

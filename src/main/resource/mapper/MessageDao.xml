@@ -1,0 +1,22 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ink.dao.MessageDao">
+
+    <!-- Result maps describe the mapping between the columns returned
+   from a query, and the class properties.  A result map isn't
+   necessary if the columns (or aliases) match to the properties
+   exactly. -->
+    <resultMap id="MessageResult" type="com.ink.entity.Message">
+        <result property="id" column="id"/>
+        <result property="showName" column="showName"/>
+        <result property="headIcon" column="headIcon"/>
+        <result property="showText" column="showText"/>
+        <result property="showImg" column="showImg"/>
+        <result property="styleId" column="styleId"/>
+        <result property="status" column="status"/>
+        <result property="createTime" column="createTime"/>
+        <association property="style" column="styleId" select="com.ink.dao.StyleDao.findById" javaType="com.ink.entity.Style"/>
+    </resultMap>
+</mapper>
